@@ -25,7 +25,5 @@ Kafka Important and Basic Commands
 ```bin/kafka-console-consumer.sh --zookeeper localhost:2181 —topic topic-name  --from-beginning```
 
 #### Alter Topic 
-```
-bin/kafka-topics.sh —zookeeper localhost:2181 --alter --topic topic_name  --parti-tions count
-//Using above command partition count can be changed
-```
+```bin/kafka-topics.sh —zookeeper localhost:2181 --alter --topic topic_name  --parti-tions count
+//Using above command partition count can be changed```
