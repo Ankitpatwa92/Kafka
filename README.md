@@ -26,4 +26,5 @@ Kafka Important and Basic Commands
 
 #### Alter Topic 
 ```bin/kafka-topics.sh —zookeeper localhost:2181 --alter --topic topic_name  --parti-tions count
-//Using above command partition count can be changed```
+//Using above command partition count can be changed
+```
