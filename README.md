@@ -12,10 +12,8 @@ Kafka Important and Basic Commands
 #### Create kafka topic 
  ```bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test```
 
-####See all Topic 
+#### See all Topic 
 ```./bin/kafka-topics.sh --list --zookeeper localhost:2181 .```
 
-####Delete Topic 
+#### Delete Topic 
 ```./bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic demo .```
-
-
