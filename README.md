@@ -22,10 +22,12 @@ Kafka Important and Basic Commands
 ```bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic-name```
 
 #### Start Consumer 
-```bin/kafka-console-consumer.sh --zookeeper localhost:2181 —topic topic-name  --from-beginning```
+```bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 —topic topic-name  --from-beginning```
 
 #### Alter Topic 
 ```
 bin/kafka-topics.sh —zookeeper localhost:2181 --alter --topic topic_name  --parti-tions count
 //Using above command partition count can be changed
 ```
+#### Describe Topic
+bin/kafka-topics.sh --describe --topic test-topic --zookeeper localhost:2181
