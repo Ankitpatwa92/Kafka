@@ -30,4 +30,6 @@ bin/kafka-topics.sh —zookeeper localhost:2181 --alter --topic topic_name  --pa
 //Using above command partition count can be changed
 ```
 #### Describe Topic
+```
 bin/kafka-topics.sh --describe --topic test-topic --zookeeper localhost:2181
+```
