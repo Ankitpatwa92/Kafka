@@ -33,3 +33,7 @@ bin/kafka-topics.sh —zookeeper localhost:2181 --alter --topic topic_name  --pa
 ```
 bin/kafka-topics.sh --describe --topic test-topic --zookeeper localhost:2181
 ```
+#### Get offset detail of particluar consumer group
+```
+bin/kafka-consumer-groups.sh  --bootstrap-server localhost:9092 --describe --group testgroup
+```
