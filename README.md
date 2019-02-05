@@ -37,3 +37,9 @@ bin/kafka-topics.sh --describe --topic test-topic --zookeeper localhost:2181
 ```
 bin/kafka-consumer-groups.sh  --bootstrap-server localhost:9092 --describe --group testgroup
 ```
+
+#### Where is Kafka Log Location
+```
+Go to config/server.properties   There you will find 
+log.dirs=/path/to/your/log/directory
+```
