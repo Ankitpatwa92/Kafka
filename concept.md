@@ -28,3 +28,8 @@ none: throw exception to the consumer if no previous offset is found for the con
 * You have messages in a topic (like you described) and you start a consumer in a new consumer group group2. There is no offset stored anywhere and this time the auto.offset.reset config will decide whether to start from the beginning of the topic (earliest) or from the end of the topic (latest)
 
 * One more thing that affects what offset value will correspond to smallest and largest configs is log retention policy. Imagine you have a topic with retention configured to 1 hour. You produce 5 messages, and then an hour later you post 5 more messages. The largest offset will still remain the same as in previous example but the smallest one won't be able to be 0 because Kafka will already remove these messages and thus the smallest available offset will be 5
+
+
+#### Default Values
+group.max.session.timeout.ms  30s
+group.min.session.timeout.ms  6s
