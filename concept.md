@@ -33,3 +33,13 @@ none: throw exception to the consumer if no previous offset is found for the con
 #### Default Values
 group.max.session.timeout.ms  30s
 group.min.session.timeout.ms  6s
+
+
+#### Observation
+
+** Max poll interval should be more that your message processing time other wise you will get following error.
+
+`Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.`
+
+Reason=> If consumer failed to poll after max poll interval rebalance of group happen and partition again assign to available consumers
+         
