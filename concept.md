@@ -43,4 +43,6 @@ group.min.session.timeout.ms  6s
 
 Reason=> If consumer failed to poll after max poll interval rebalance of group happen and partition again assign to available consumers
          
-* ![Kafka Position](kafka_position.JPG)
+* Kafka Positioning
+
+![Kafka Position](kafka_position.JPG)
