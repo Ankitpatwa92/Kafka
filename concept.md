@@ -51,5 +51,6 @@ Reason=> If consumer failed to poll after max poll interval rebalance of group h
 
 * auto.offset.reset latest vs earliest
 
-earliest: if any new group join it will read all the old record
+`earliest: if any new group join it will read all the old record
 latest:   if any new group join it will read record produced after group joining
+`
