@@ -43,3 +43,14 @@ bin/kafka-consumer-groups.sh  --bootstrap-server localhost:9092 --describe --gro
 Go to config/server.properties   There you will find 
 log.dirs=/path/to/your/log/directory
 ```
+
+#### Read message from kafka consume 
+```
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning
+```
+
+
+#### Send message to topic 
+```
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic ACCOUNT-BALANCES-INBOUND-TOPIC
+```
