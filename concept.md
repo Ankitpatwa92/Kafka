@@ -53,3 +53,6 @@ Reason=> If consumer failed to poll after max poll interval rebalance of group h
     *  **earliest**: if any new group join it will read all the old record
     *  **latest**:   if any new group join it will read record produced after group joining
 
+### Difference between heartbeat and session timeout
+The heartbeat.interval.ms specifies the frequency of sending heart beat signal by the consumer. So if this is 3000 ms (default), then every 3 seconds the consumer will send the heartbeat signal to the broker. The session.timeout.ms specifies the amount of time within which the broker needs to get at least one heart beat signal from the consumer. Otherwise it will mark the consumer as dead. The default value 10000 ms(10 seconds) makes provision for missing three heart beat signals before a broker will mark the consumer as dead. In a network setup under heavy load, it is normal to miss few heartbeat signals. So it is recommended to wait for missing 3 heart beat signals before marking the consumer as dead. That is the reason for the 1/3 recommendation.
+
