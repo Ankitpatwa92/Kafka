@@ -58,3 +58,6 @@ The heartbeat.interval.ms specifies the frequency of sending heart beat signal b
 
 ### Consumer Poll
 consumer.poll(1000) it will poll to message based on the property props.put("max.poll.records",3) in one iteration and wait until 1 sec
+
+### max.poll.interval.ms
+max.poll.interval.ms config is not for holding the consumer for delay, When using group management if consumer failed to poll in 60000 ms Zookeeper assume consumer is died and invokes the rebalancing.
