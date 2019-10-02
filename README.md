@@ -54,3 +54,14 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic
 ```
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic ACCOUNT-BALANCES-INBOUND-TOPIC
 ```
+
+### Describe Consumer Grop
+```
+
+D:\Tools\kafka_2.11-2.1.0>bin\windows\kafka-run-class.bat kafka.admin.ConsumerGroupCommand --bootstrap-server localhost:9092 --group g1 --describe
+
+TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                     HOST            CLIENT-ID
+dryfruit        0          90              90              0               consumer-1-eac23e20-93af-4215-a883-8f7e493468bc /127.0.0.1      consumer-1
+dryfruit        1          90              90              0               consumer-1-eac23e20-93af-4215-a883-8f7e493468bc /127.0.0.1      consumer-1
+dryfruit        2          0               0               0               consumer-1-eac23e20-93af-4215-a883-8f7e493468bc /127.0.0.1      consumer-1
+```
