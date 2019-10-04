@@ -80,3 +80,24 @@ Topic:dryfruit  PartitionCount:3        ReplicationFactor:3     Configs:
 ```
 bin\windows\kafka-run-class.bat kafka.admin.ConsumerGroupCommand --list  --bootstrap-server localhost:9095
 ```
+
+### Get Partition wise max offset detail
+```
+bin\windows\kafka-run-class.bat kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic mytopic
+
+dryfruit:0:119
+dryfruit:1:120
+dryfruit:2:0
+```
+
+### Read last n offset from kafka topic
+
+```
+bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9095 --topic dryfruit --offset 114 --partition 0
+
+To get last n offset data provide offset value as [lastoffset-n] 
+
+example last offset =120
+                  n =5
+				--offset=120-5=115  
+```    
