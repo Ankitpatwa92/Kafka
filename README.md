@@ -76,3 +76,7 @@ Topic:dryfruit  PartitionCount:3        ReplicationFactor:3     Configs:
         Topic: dryfruit Partition: 1    Leader: 0       Replicas: 0,1,2 Isr: 0,2
         Topic: dryfruit Partition: 2    Leader: 2       Replicas: 1,2,0 Isr: 0,2
 ```
+### List all Consumer Group
+```
+bin\windows\kafka-run-class.bat kafka.admin.ConsumerGroupCommand --list  --bootstrap-server localhost:9095
+```
