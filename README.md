@@ -65,3 +65,14 @@ dryfruit        0          90              90              0               consu
 dryfruit        1          90              90              0               consumer-1-eac23e20-93af-4215-a883-8f7e493468bc /127.0.0.1      consumer-1
 dryfruit        2          0               0               0               consumer-1-eac23e20-93af-4215-a883-8f7e493468bc /127.0.0.1      consumer-1
 ```
+
+
+### Get Partition Replica and ISR detail
+```
+bin\windows\kafka-topics.bat --describe --zookeeper localhost:2181 --topic dryfruit
+
+Topic:dryfruit  PartitionCount:3        ReplicationFactor:3     Configs:
+        Topic: dryfruit Partition: 0    Leader: 2       Replicas: 2,0,1 Isr: 0,2
+        Topic: dryfruit Partition: 1    Leader: 0       Replicas: 0,1,2 Isr: 0,2
+        Topic: dryfruit Partition: 2    Leader: 2       Replicas: 1,2,0 Isr: 0,2
+```
