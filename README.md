@@ -22,7 +22,7 @@ Kafka Important and Basic Commands
 ```bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic-name```
 
 #### Start Consumer 
-```bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 —topic topic-name  --from-beginning```
+```bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 —topic topic-name  --from-beginning  --max-messages 1 ```
 
 #### Alter Topic 
 ```
