@@ -82,3 +82,6 @@ Double
 Integer
 Boolean
 
+#Rabbitmq Vs Kafka 
+
+User kafka for streaning and huge amount of data
