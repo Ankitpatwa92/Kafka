@@ -84,7 +84,7 @@ class ProdRunnable implements Runnable {
 		
 		List<Bill> list = ManyToOneProducer.prepareBillList();
 		Properties props = PropertyUtil.getProducerProperties();
-		props.put("partitioner.class", "com.intellect.kafka.OneToOneCustomPartitioner");
+		props.put("partitioner.class", "com.msa.kafka.OneToOneCustomPartitioner");
 		
 		for (Bill bill : list) 
 		{					
