@@ -28,7 +28,7 @@ public class OneToManyProducer {
 		List<Bill> list = prepareBillList();
 		Properties props = PropertyUtil.getProducerProperties();
 
-		props.put("partitioner.class", "com.intellect.kafka.OneToOneCustomPartitioner");
+		props.put("partitioner.class", "com.msa.kafka.OneToOneCustomPartitioner");
 
 		
 		for (Bill bill : list) 
