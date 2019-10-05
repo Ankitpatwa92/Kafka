@@ -61,3 +61,15 @@ consumer.poll(1000) it will poll to message based on the property props.put("max
 
 ### max.poll.interval.ms
 max.poll.interval.ms config is not for holding the consumer for delay, When using group management if consumer failed to poll in 60000 ms Zookeeper assume consumer is died and invokes the rebalancing.
+
+
+### Kafka key concept
+```
+First, let me stress that you SHOULDN’T have to specify the partition you send data to, only the topic. All that magic is handled by the Kafka Client for a very good reason. Let’s consider a few use cases.
+
+if you publish multiple messages without providing any key, then the messages are randomly assigned to the partitions, therefore they are pretty even.
+If you publish a key with your message (think for example, user_id if your topic is about users), then the key will be hashed, and the messages that have the same key will always go to the same partition (this really helps for partial ordering)
+If your key is diverse enough (a lot of values), then again, you end up with even partitions.
+If your key is not diverse (think only a few values), then you end up with very uneven partitions
+In the case you really want to have control over where your keys go, you can write our own Partitioner. I don’t recommend this unless you know what you’re doing
+```
