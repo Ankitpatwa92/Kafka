@@ -73,3 +73,12 @@ If your key is diverse enough (a lot of values), then again, you end up with eve
 If your key is not diverse (think only a few values), then you end up with very uneven partitions
 In the case you really want to have control over where your keys go, you can write our own Partitioner. I don’t recommend this unless you know what you’re doing
 ```
+
+### Serializer
+```
+By default kafka supports following serializer
+String
+Double
+Integer
+Boolean
+
