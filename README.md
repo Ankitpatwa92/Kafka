@@ -19,7 +19,8 @@ Kafka Important and Basic Commands
 ```./bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic demo .```
 
 #### Start Producer
-```bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic-name
+```
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic-name
 
 #with key value
 
