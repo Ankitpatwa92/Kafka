@@ -19,9 +19,9 @@ Kafka Important and Basic Commands
 ```./bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic demo .```
 
 #### Start Producer
-```bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic-name```
+```bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic-name
 //with key value
-``` bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic-name --property "parse.key=true" --property "key.separator=:"```
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic-name --property "parse.key=true" --property "key.separator=:"```
 
 #### Start Consumer 
 ```bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 —topic topic-name  --from-beginning  --max-messages 1 ```
